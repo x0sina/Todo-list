@@ -1,0 +1,160 @@
+@import url('./fonts/fonts.css');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+body {
+    font-family: SF-Pro;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #222;
+    color: #FFF;
+}
+
+.card {
+    border-radius: 45px;
+    background: #444;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card h1 {
+    padding: 0 3rem;
+    text-align: center;
+}
+
+.selected {
+    width: 100%;
+    padding: 0.8rem;
+    outline: none;
+    border-radius: 18px;
+    border: 2px solid #FFFFFF50;
+    background: #333;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.newtodo {
+    background-color: #333;
+    outline: none;
+    padding: 0.55rem;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #FFFFFF50;
+    border-radius: 14px;
+    color: #FFF;
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem 0;
+}
+
+.todo li>div div {
+    border: #FFFFFF50 3px solid;
+    border-radius: 50px;
+    width: 23px;
+    height: 23px;
+}
+
+.todo li>div {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex: 1;
+}
+
+.todo li {
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+    justify-content: space-between;
+}
+
+.todo h2 {
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 0.6rem;
+}
+
+.todo span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.editico,
+.delico {
+    cursor: pointer;
+    transition: .15s;
+}
+
+.editico,
+.delico {
+    width: 24px;
+    height: 24px;
+}
+
+.editico:hover,
+.delico:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+.add-todo {
+    padding: .8rem;
+    cursor: pointer;
+    border-radius: 18px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #666;
+    border: none;
+    transition: .2s;
+}
+
+.add-todo:hover {
+    background-color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem 0;
+}
+
+.done div {
+    border: #0960C7 3px solid;
+    background-color: #0960C7;
+}
+
+.done h2 {
+    text-decoration: line-through;
+    opacity: .7;
+}
